@@ -30,15 +30,28 @@ const KEYS = [
     "z",
 ];
 
-const Keyboard = () => {
+type KeyboardProps = {
+    disabled?: boolean,
+    activeLetters: string[],
+    inactiveLetters: string[],
+    addGuessedLetter: (letter: string) => void
+}
+
+const Keyboard = ({ 
+    activeLetters,
+    inactiveLetters, 
+    disabled = false,
+    addGuessedLetter } : KeyboardProps ) => {
   return (
     <div style={{ 
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(75px, 1fr))", 
     gap: ".5rem" }}>
       {KEYS.map(key => {
+        const isActive = activeLetters.includes(key);
+        const isInActive = inactiveLetters.includes(key);
             return (
-                <button className='btn' key={key}>{key}</button>
+                <button onClick={() => addGuessedLetter(key)} className={`${"btn"} ${isActive ? "active" : "" } ${isInActive ? "inactive" : ""}`} disabled={isActive || isInActive || disabled} key={key}>{key}</button>
             )
       })}
     </div>
