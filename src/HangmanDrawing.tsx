@@ -2,13 +2,13 @@ import React from 'react';
 const HEAD = (
     <div 
     style={{
-        width: "50px",
-        height: "50px",
+        width: "40px",
+        height: "40px",
         borderRadius: "100%",
         border: "10px solid #111",
         position: "absolute",
         top: "50px",
-        right: "-30px"
+        right: "-25px"
     }}
     />
 )
@@ -17,10 +17,10 @@ const BODY = (
     <div 
     style={{
         width: "10px",
-        height: "100px",
+        height: "90px",
         background: "#111",
         position: "absolute",
-        top: "120px",
+        top: "110px",
         right: "0px"
     }}
     />
@@ -29,12 +29,12 @@ const BODY = (
 const RIGHT_ARM = (
     <div 
     style={{
-        width: "100px",
+        width: "90px",
         height: "10px",
         background: "#111",
         position: "absolute",
         top: "150px",
-        right: "-100px",
+        right: "-90px",
         rotate: "-30deg",
         transformOrigin: "left bottom"
     }}
@@ -44,7 +44,7 @@ const RIGHT_ARM = (
 const LEFT_ARM = (
     <div 
     style={{
-        width: "100px",
+        width: "90px",
         height: "10px",
         background: "#111",
         position: "absolute",
@@ -60,12 +60,12 @@ const LEFT_ARM = (
 const RIGHT_LEG = (
     <div 
     style={{
-        width: "100px",
+        width: "90px",
         height: "10px",
         background: "#111",
         position: "absolute",
-        top: "210px",
-        right: "-90px",
+        top: "190px",
+        right: "-80px",
         rotate: "60deg",
         transformOrigin: "left bottom"
     }}
@@ -80,7 +80,7 @@ const LEFT_LEG = (
         height: "10px",
         background: "#111",
         position: "absolute",
-        top: "210px",
+        top: "190px",
         right: "0px",
         rotate: "-60deg",
         transformOrigin: "right bottom"
@@ -98,9 +98,9 @@ const HangmanDrawing = ({ numberOfGuesses }: HangmanDrawingProps) => {
   return (
     <div style={{ position: "relative" }}>
        {BODY_PARTS.slice(0, numberOfGuesses)}
-      <div style={{ position: "absolute",  height: "50px", width: "10px", background: "#111", top: "0", right: "0" }} />
-      <div style={{ height: "10px", width: "200px", background: "#111", marginLeft: "120px" }} />
-      <div style={{ height: "400px", width: "10px", background: "#111", marginLeft: "120px" }} />
+      <div style={{ position: "absolute",  height: "40px", width: "10px", background: "#111", top: "0", right: "0" }} />
+      <div style={{ height: "10px", width: "160px", background: "#111", marginLeft: "120px" }} />
+      <div style={{ height: "300px", width: "10px", background: "#111", marginLeft: "120px" }} />
       <div style={{ height: "10px", width: "250px", background: "#111" }} />
     </div>
   )
